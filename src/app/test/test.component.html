@@ -4,3 +4,14 @@
 <h2>{{name.length}}</h2>
 <h2>{{name.toUpperCase()}}</h2>
 <h2>{{siteUrl}}</h2>
+
+
+<!--Property binding ways-->
+<!--First way and first syntax-->
+<input type="text" value="Aleem" [id]="testId">
+<br>
+    <!-- disabled is inbuilt angular property-->
+<input type="text" value="Pasha" id="{{testId}}" [disabled]="isDisabled">
+<br>
+<!--second way and Second syntax-->
+<input type="text" value="Nayeem" [id]="testId" bind-disabled="true">
