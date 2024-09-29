@@ -32,3 +32,21 @@
 <br>
 {{greeting}}
 {{eventType}}
+
+
+<!--Template Reference variables-->
+
+<!--
+  -> I want the text enterd in the input should be displayed in console when buton is clicked
+  -> I want the text eneterd in the input should be displayed in UI screen when button is clicked
+
+
+  Sysntax 
+  <element #variable >
+    #myInput is the varaible below 
+    element is input tag
+-->
+
+<input #myInput type="text">
+<button (click)="onSubmit(myInput.value)" >Submit</button>
+{{inputValue}}

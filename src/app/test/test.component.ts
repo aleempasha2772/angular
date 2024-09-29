@@ -48,4 +48,11 @@ export class TestComponent implements OnInit {
   }
 
 
+  //Template Reference varaibles
+  public inputValue = "";
+  onSubmit(value:any){
+    console.log(value)
+    this.inputValue = value;
+  }
+
 }
