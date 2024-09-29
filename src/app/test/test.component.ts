@@ -55,4 +55,7 @@ export class TestComponent implements OnInit {
     this.inputValue = value;
   }
 
+  //Two way binding 
+  public inputName = "";
+
 }
