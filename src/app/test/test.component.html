@@ -26,3 +26,9 @@
 <h2 class="text-special" [class]="failureClass">Angular Tutorial</h2>
 <h2 [class.text-failure]="!hasDanger">Angular Tutorial</h2>
 <h2 [ngClass] = "messageClassses">Angular business</h2>
+
+<!--Event Binding-->
+<button (click)= "onClick($event)">Task</button>
+<br>
+{{greeting}}
+{{eventType}}

@@ -38,5 +38,14 @@ export class TestComponent implements OnInit {
     return "Hello " + this.name
   }
 
+  //Event Binding 
+  public greeting = "";
+  public eventType = "";
+  onClick(event: any){
+    console.log(event);
+    this.greeting = "Button is clicked";
+    this.eventType = event.type;
+  }
+
 
 }
