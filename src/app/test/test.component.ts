@@ -13,7 +13,20 @@ export class TestComponent implements OnInit {
 
   //property binding example 
   public testId = 'myId';
-  
+
+  //class binding 
+  public successClass = "text-success";
+  public failureClass = "text-failure";
+  public hasDanger = false;
+  public isSpecial = true;
+  public messageClassses = {
+    "text-success" : !this.hasDanger,
+    "text-failure" : this.hasDanger,
+    "text-special" : this.isSpecial
+
+  }
+
+
   public isDisabled = false;
   constructor() { }
 
