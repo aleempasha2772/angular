@@ -56,7 +56,29 @@
 {{inputName}}
 
 
+<!--ngIf Directive-->
+<h2 *ngIf="!directive; else elseBlock">Hydraa</h2>
 
+<ng-template #elseBlock>
+    <h2>hidden</h2>
+</ng-template>
+
+
+<p *ngif="directive1; then thenBlock; else elseBlock1"></p>
+
+<ng-template #thenBlock>
+    <h2>food is coocked</h2>
+</ng-template>
+<ng-template #elseBlock1>   
+    <h2>food is not coocked</h2>
+</ng-template>
+
+<!--ngFor directive-->
+
+<div *ngFor="let color of colors">
+    
+    <h2>{{color}}</h2>
+</div>
 
 
 

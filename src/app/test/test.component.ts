@@ -58,4 +58,12 @@ export class TestComponent implements OnInit {
   //Two way binding 
   public inputName = "";
 
+  //ngIf directive
+  public directive = true
+
+  public directive1 = true;
+
+  //ngFor directive 
+  public colors = ["black", "blue", "white","green","yellow"];
+
 }
