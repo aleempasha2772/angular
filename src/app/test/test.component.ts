@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: '.app-test',
+  selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
@@ -56,7 +56,7 @@ export class TestComponent implements OnInit {
   }
 
   //Two way binding 
-  public inputName = "";
+  public inputName = ""
 
   //ngIf directive
   public directive = true
@@ -65,5 +65,22 @@ export class TestComponent implements OnInit {
 
   //ngFor directive 
   public colors = ["black", "blue", "white","green","yellow"];
+
+  /**
+   * parent to child -> @Input 
+   * child to parent -> @Output
+   */
+
+  @Input() public parentData: any;
+
+
+  //sample 
+  public employees = [
+    {"id": 1,"name":"Aleem","age":24},
+    {"id": 2,"name":"Nayeem","age":24},
+    {"id": 3,"name":"Pasha","age":24},
+    {"id": 4,"name":"Mohammad","age":24},
+    {"id": 4,"name":"Abdul","age":24},
+  ]
 
 }
