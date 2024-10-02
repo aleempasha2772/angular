@@ -75,12 +75,5 @@ export class TestComponent implements OnInit {
 
 
   //sample 
-  public employees = [
-    {"id": 1,"name":"Aleem","age":24},
-    {"id": 2,"name":"Nayeem","age":24},
-    {"id": 3,"name":"Pasha","age":24},
-    {"id": 4,"name":"Mohammad","age":24},
-    {"id": 4,"name":"Abdul","age":24},
-  ]
-
+  
 }
