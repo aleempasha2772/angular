@@ -1,7 +1,11 @@
 <div>
   <h1>Hello {{title}}</h1>
   <app-test [parentData]="name"></app-test>
-  <app-employee-list></app-employee-list>
-  <app-student-list></app-student-list>
+  <nav>
+    <a routerLink="/employees" routerLinkActive="active">Employees</a>
+    <br>
+    <a routerLink="/students" routerLinkActive="active">Stundets</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
 
