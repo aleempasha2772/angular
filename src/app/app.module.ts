@@ -9,12 +9,15 @@ import { TestComponent } from './test/test.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentListComponent } from './student-list/student-list.component';
+
+import { TdfComponent } from './tdf/tdf.component';
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     EmployeeListComponent,
     StudentListComponent,
+    TdfComponent,
     
   ],
   imports: [
