@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-tdf',
@@ -15,6 +16,7 @@ export class TdfComponent implements OnInit {
   topicHasError = true;
 
   topics = ["cricket","football","Politics"]
+  userModel = new User('Aleem','a@gmail.com','7780433243','football',true);
 
   validateTopic(value: any){
 
