@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { EnrollmentService } from '../enrollment.service';
 
 @Component({
   selector: 'app-tdf',
@@ -8,7 +9,7 @@ import { User } from '../user';
 })
 export class TdfComponent implements OnInit {
 
-  constructor() { }
+  constructor(private enrollmentService:EnrollmentService) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +27,14 @@ export class TdfComponent implements OnInit {
     else{
       this.topicHasError = false
     }
+  }
+
+  onSubmit(){
+    this.enrollmentService.onEnroll(this.userModel)
+    .subscribe(
+      data=>{console.log('Success!',data)},
+      error => {console.log(error)}
+    )
   }
 
 }

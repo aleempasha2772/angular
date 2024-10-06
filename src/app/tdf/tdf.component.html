@@ -1,6 +1,12 @@
 <p>tdf works!</p>
 <h2> Enrollement Form</h2>
-<form  #userForm="ngForm">
+<!--
+    1. ngSubmit for submitting the form
+    2. ngForm for forms
+    3. ngModel for binding 
+    4. ngModelGroup for grouping the input data fields
+-->
+<form  #userForm="ngForm" (ngSubmit) ="onSubmit()">
 
     {{userForm.value | json}}
     <br>
@@ -38,4 +44,7 @@
             <input type="text" name="country" id="" class="form-control" ngModel>
         </div>
     </div>
+    <button class="btn btn-primary" >
+        Submit
+    </button>
 </form>

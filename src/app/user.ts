@@ -5,7 +5,5 @@ export class User {
         public telephone:string,
         public topic:string,
         public subscribe: boolean
-    ){
-        
-    }
+    ){}
 }
