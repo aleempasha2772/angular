@@ -27,4 +27,21 @@ export class RfComponent implements OnInit {
       country : new FormControl('')
     })
   })
+
+  setValues(){
+    this.registrationForm.setValue({
+        username : 'Aleem',
+        password : 'asas',
+        confirmPassword : 'asas',
+        address : {
+        city: 'vij',
+        state: 'and',
+        country : 'IND'
+      }
+    });
+  }
+  onSubmit(){
+    console.log(this.registrationForm.value)
+  }
+
 }
