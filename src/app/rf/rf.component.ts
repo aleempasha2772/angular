@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-rf',
@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class RfComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -17,6 +17,7 @@ export class RfComponent implements OnInit {
    * creating the model in component and binding it with "formGroup"
    */
 
+  //creating form controls manually
   registrationForm = new FormGroup({
     username : new FormControl(''),
     password : new FormControl(''),
@@ -27,6 +28,19 @@ export class RfComponent implements OnInit {
       country : new FormControl('')
     })
   })
+
+  //creating form controls through formBuider Service
+  registrationForm1 = this.fb.group({
+    username: ['Aleem'],
+    password: [''],
+    confirmPassword: [''],
+    address : this.fb.group({
+      city:[''],
+      state:[''],
+      country:['']
+    })
+  })
+
 
   setValues(){
     this.registrationForm.setValue({
@@ -40,8 +54,21 @@ export class RfComponent implements OnInit {
       }
     });
   }
+  setValues1(){
+    this.registrationForm1.setValue({
+        username : 'Aleem',
+        password : 'asas',
+        confirmPassword : 'asas',
+        address : {
+        city: 'vij',
+        state: 'and',
+        country : 'IND'
+      }
+    });
+  }
+
   onSubmit(){
-    console.log(this.registrationForm.value)
+    console.log(this.registrationForm1.value)
   }
 
 }
