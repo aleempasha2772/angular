@@ -1,4 +1,5 @@
 <p>rf works!</p>
+{{registrationForm.value | json}}
 <form  [formGroup] = "registrationForm">
     <br>
     <div class="form-group" >
@@ -7,17 +8,32 @@
     </div>
     <div class="form-group">
         <label>Password</label>
-        <input formControlName="password" type="email" name="password" id="" class="form-control">
+        <input formControlName="password" type="text" name="password" id="" class="form-control">
     </div>
     <div class="form-group">
         <label>Confirm Password</label>
         <input formControlName="confirmPassword" type="tel" name="confirmPassword" id="" class="form-control">
     </div>
+    <div formGroupName="address">
+        <div class="form-group" >
+            <label>City</label>
+            <input formControlName="city" type="text" name="city" id="" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>State</label>
+            <input formControlName="state" type="text" name="city" id="" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Country</label>
+            <input formControlName="country" type="text" name="city" id="" class="form-control">
+        </div>
+
+    </div>
     <button class="btn btn-primary" type="submit">
         Submit
     </button>
     <br>
-    {{registrationForm.value | json}}
+   
 
 
 </form>

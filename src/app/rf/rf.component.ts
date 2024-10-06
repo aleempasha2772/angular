@@ -20,6 +20,11 @@ export class RfComponent implements OnInit {
   registrationForm = new FormGroup({
     username : new FormControl(''),
     password : new FormControl(''),
-    confirmPassword : new FormControl('')
+    confirmPassword : new FormControl(''),
+    address : new FormGroup({
+      city: new FormControl(''),
+      state: new FormControl(''),
+      country : new FormControl('')
+    })
   })
 }
